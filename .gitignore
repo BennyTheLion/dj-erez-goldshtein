@@ -1,0 +1,15 @@
+# Real secrets - use admin/config.example.php as the template
+admin/config.php
+
+# Admin-uploaded media (managed via the admin panel on each environment, not tracked)
+Images/gallery/*
+!Images/gallery/.htaccess
+!Images/gallery/.gitkeep
+
+Videos/*
+!Videos/.htaccess
+!Videos/.gitkeep
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
