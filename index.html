@@ -300,6 +300,9 @@
             overflow-x: auto;
             padding: 1rem 0.5rem 1.5rem;
             scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-x;
+            overscroll-behavior-x: contain;
         }
 
         .gallery-scroller::-webkit-scrollbar {
@@ -328,9 +331,11 @@
             box-shadow: 0 10px 25px rgba(255, 0, 128, 0.3);
         }
 
-        .gallery-thumb:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 0, 128, 0.5);
+        @media (hover: hover) and (pointer: fine) {
+            .gallery-thumb:hover {
+                transform: scale(1.05);
+                box-shadow: 0 15px 35px rgba(255, 0, 128, 0.5);
+            }
         }
 
         /* Lightbox */
@@ -423,6 +428,29 @@
             }
         }
 
+        @media (max-width: 480px) {
+            .gallery-thumb {
+                width: 78vw;
+                height: 55vw;
+                max-height: 220px;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                width: 38px;
+                height: 38px;
+                font-size: 1.5rem;
+            }
+
+            .lightbox-prev {
+                right: 0.5rem;
+            }
+
+            .lightbox-next {
+                left: 0.5rem;
+            }
+        }
+
         /* Video Gallery Section */
         .video-scroller {
             display: flex;
@@ -430,6 +458,9 @@
             overflow-x: auto;
             padding: 1rem 0.5rem 1.5rem;
             scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-x;
+            overscroll-behavior-x: contain;
         }
 
         .video-scroller::-webkit-scrollbar {
@@ -468,9 +499,11 @@
             background: #000;
         }
 
-        .video-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 0, 128, 0.5);
+        @media (hover: hover) and (pointer: fine) {
+            .video-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 15px 35px rgba(255, 0, 128, 0.5);
+            }
         }
 
         .video-thumb {
@@ -529,6 +562,20 @@
                 width: 55px;
                 height: 55px;
                 font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-card {
+                width: 78vw;
+                height: 55vw;
+                max-height: 220px;
+            }
+
+            .video-play-icon {
+                width: 46px;
+                height: 46px;
+                font-size: 1.2rem;
             }
         }
 
